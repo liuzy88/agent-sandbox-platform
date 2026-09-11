@@ -7,7 +7,7 @@ import (
 	"fmt"
 
 	"agent-platform/internal/contracts"
-	"agent-platform/model"
+	"agent-platform/internal/model"
 )
 
 type imageState int

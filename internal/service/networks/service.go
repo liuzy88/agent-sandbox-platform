@@ -11,8 +11,8 @@ import (
 	"time"
 
 	"agent-platform/internal/contracts"
+	"agent-platform/internal/model"
 	"agent-platform/internal/security"
-	"agent-platform/model"
 )
 
 const (

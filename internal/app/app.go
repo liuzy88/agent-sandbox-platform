@@ -18,6 +18,7 @@ import (
 	"agent-platform/internal/executor"
 	"agent-platform/internal/images"
 	"agent-platform/internal/lifecycle"
+	"agent-platform/internal/model"
 	"agent-platform/internal/modelgateway"
 	"agent-platform/internal/queue"
 	"agent-platform/internal/reconciler"
@@ -30,7 +31,6 @@ import (
 	"agent-platform/internal/service/steers"
 	"agent-platform/internal/storage"
 	"agent-platform/internal/worker"
-	"agent-platform/model"
 )
 
 func RunServer(ctx context.Context, log *slog.Logger, cfg config.Config) error {

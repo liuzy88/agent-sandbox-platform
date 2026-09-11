@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"agent-platform/internal/config"
+	"agent-platform/internal/model"
 	"agent-platform/internal/security"
-	"agent-platform/model"
 
 	"k8s.io/client-go/kubernetes"
 	corev1 "k8s.io/client-go/kubernetes/typed/core/v1"

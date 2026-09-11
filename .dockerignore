@@ -2,7 +2,7 @@
 .env
 .env.*
 AGENTS.md
-agent-demo/
+examples/agent-demo/
 charts/
 docs/
 examples/

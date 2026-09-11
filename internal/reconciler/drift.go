@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"agent-platform/model"
+	"agent-platform/internal/model"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )

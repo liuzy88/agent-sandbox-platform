@@ -11,7 +11,7 @@ import (
 
 	"agent-platform/internal/app"
 	"agent-platform/internal/config"
-	"agent-platform/model"
+	"agent-platform/internal/model"
 )
 
 func main() {

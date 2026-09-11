@@ -90,4 +90,4 @@ worker 侧还常用 `WORKER_POLL_INTERVAL`(1s)、`WORKER_CONCURRENCY`(4)、
 ## 关联的本地/单机模板
 
 - 根目录 `.env.example`：单机跑二进制 / `docker compose` 本地基础设施时使用（envconfig 键全集）。
-- `agent-demo/backend/.env.example`：agent-demo 后端的环境模板。
+- `examples/asp-demo/backend/.env.example`：集成示例后端的环境模板。

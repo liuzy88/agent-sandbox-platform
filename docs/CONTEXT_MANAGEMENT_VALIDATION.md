@@ -70,7 +70,7 @@ Demo `model_parameters` → 平台 `model.parameters` → 冻结配置 → Go ru
 
 当前本地默认 runtime `go-runtime-20260907-341b1877`，digest `sha256:341b18771079a322c689a0a5799c532be00b4da1c157000cb918435d0c82e674`。Go 默认上下文窗口 262144 tokens（256K），默认输出预算仍 4096，70% 压缩及每次请求覆盖保持不变。此前文档中 32768 为历史版本默认。仅切换本地镜像，未更新 UAT/prod。
 
-Demo 模型设置完整发送可选模型参数，非法 JSON/冲突预算阻止点击及回车发送并保留输入。删除未使用的插件、公网地址、出口白名单、S3_REGION 配置及旧资源构造/模型代理代码；实际环境文件有效值除本次镜像 ID 切换外保留。独立网络配置 API 保留；旧 per-run network_policy 和未知顶层字段返回 422。新增 agent-demo/README.md。
+Demo 模型设置完整发送可选模型参数，非法 JSON/冲突预算阻止点击及回车发送并保留输入。删除未使用的插件、公网地址、出口白名单、S3_REGION 配置及旧资源构造/模型代理代码；实际环境文件有效值除本次镜像 ID 切换外保留。独立网络配置 API 保留；旧 per-run network_policy 和未知顶层字段返回 422。新增 examples/asp-demo/README.md。
 
 验证：Demo 后端全量 47 passed、前端构建通过；Go race/vet 通过。真实容器验证未传窗口时不会按旧 32K 阈值压缩，显式 32768 覆盖及 70% 压缩、参数透传和默认输出预算通过。浏览器实际 run `7a7d2d03-815b-4344-bb59-817ac1e7ba45` succeeded，返回 JSON，唯一 trace 的 SHA-256 `94f2bba44fdbfada96379b7bcc0527a1b6ebb27a9a232dde705bcf0bfb9c2a34`；实际模型请求中采样参数、thinking、response_format、max_tokens=512 均已核对。
 

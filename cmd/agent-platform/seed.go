@@ -13,7 +13,7 @@ import (
 
 	"agent-platform/internal/contracts"
 	"agent-platform/internal/images"
-	"agent-platform/model"
+	"agent-platform/internal/model"
 )
 
 func seedCommand(ctx context.Context, log *slog.Logger, store *model.Store) int {

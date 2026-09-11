@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"agent-platform/model"
+	"agent-platform/internal/model"
 )
 
 var ErrProfileReferenced = errors.New("reconciler: runtime profile is referenced by run stages")

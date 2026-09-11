@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"agent-platform/internal/executor"
-	"agent-platform/model"
+	"agent-platform/internal/model"
 )
 
 type DBContentDeleter struct {

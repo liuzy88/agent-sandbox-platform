@@ -11,7 +11,7 @@ import (
 	"github.com/google/uuid"
 
 	"agent-platform/internal/contracts"
-	"agent-platform/model"
+	"agent-platform/internal/model"
 )
 
 func (s *Service) materializeOutbox(ctx context.Context, ev contracts.Event, meta RunMeta, expiresAt time.Time) error {

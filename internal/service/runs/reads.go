@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"agent-platform/internal/contracts"
+	"agent-platform/internal/model"
 	"agent-platform/internal/storage"
-	"agent-platform/model"
 )
 
 func (s *Service) RunClientID(ctx context.Context, runID string) (string, error) {

@@ -10,8 +10,8 @@ import (
 
 	"agent-platform/internal/contracts"
 	"agent-platform/internal/lifecycle"
+	"agent-platform/internal/model"
 	"agent-platform/internal/storage"
-	"agent-platform/model"
 )
 
 const ContentSteer = "steer.message"

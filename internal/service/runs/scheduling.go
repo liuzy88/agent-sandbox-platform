@@ -9,7 +9,7 @@ import (
 	"github.com/google/uuid"
 
 	"agent-platform/internal/contracts"
-	"agent-platform/model"
+	"agent-platform/internal/model"
 )
 
 const outboxClaimTTL = 5 * time.Minute

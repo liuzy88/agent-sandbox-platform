@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"agent-platform/internal/contracts"
-	"agent-platform/model"
+	"agent-platform/internal/model"
 )
 
 const (

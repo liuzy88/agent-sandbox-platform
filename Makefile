@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-.PHONY: build build-k8s tidy compose-up compose-down compose-logs docker-sandbox docker-sandbox-python docker-sandbox-node docker-sandbox-k8s admin-build control-image-arm64 help
+.PHONY: build build-k8s tidy compose-up compose-down compose-logs docker-sandbox docker-sandbox-python docker-sandbox-node docker-sandbox-hermes docker-sandbox-k8s admin-build control-image-arm64 help
 
 GO ?= go
 BIN ?= bin/agent-platform
@@ -36,10 +36,13 @@ docker-sandbox-python:
 docker-sandbox-node:
 	docker build -f sandbox-runtime-node/Dockerfile -t agent-platform/sandbox-runtime:node ./sandbox-runtime-node
 
+docker-sandbox-hermes:
+	docker build -f sandbox-runtime-hermes/Dockerfile -t agent-platform/sandbox-runtime:hermes ./sandbox-runtime-hermes
+
 # The console is intentionally built outside Docker so platform-image builds
 # do not install Node dependencies. Its dist files are embedded by Go.
 admin-build:
-	cd web/admin && npm run build
+	cd web/admin && npm install && npm run build
 
 # Builds and verifies locally; pushing remains an explicit docker push command.
 # CONTROL_REPOSITORY defaults to an example registry; set it to your image repo.
@@ -57,5 +60,6 @@ help:
 	  'Safe deployment shortcuts (no target runs by default):' \
 	  '  make admin-build            Build the embedded admin console outside Docker.' \
 	  '  make control-image-arm64    Build/verify ARM64 control image locally; no push.' \
+	  '  make docker-sandbox-hermes Build the Hermes runtime image locally; no push.' \
 	  '' \
   'Variables: CONTROL_TAG, RUNTIME_TAG, NAMESPACE, RELEASE.'

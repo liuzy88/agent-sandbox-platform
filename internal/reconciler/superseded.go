@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"agent-platform/internal/cleanup"
-	"agent-platform/model"
+	"agent-platform/internal/model"
 )
 
 func (r *Runner) EnqueueSupersededProfileCleanup(ctx context.Context) (int, error) {

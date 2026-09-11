@@ -11,7 +11,7 @@ import (
 	"strings"
 
 	"agent-platform/internal/config"
-	"agent-platform/model"
+	"agent-platform/internal/model"
 )
 
 type BaselineSpec struct {

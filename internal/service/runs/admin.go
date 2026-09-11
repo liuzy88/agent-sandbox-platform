@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"time"
 
-	"agent-platform/model"
+	"agent-platform/internal/model"
 )
 
 type CreatedClient struct {

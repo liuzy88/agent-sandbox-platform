@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"agent-platform/internal/lifecycle"
-	"agent-platform/model"
+	"agent-platform/internal/model"
 )
 
 const (
