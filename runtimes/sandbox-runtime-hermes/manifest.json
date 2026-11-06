@@ -1,7 +1,1 @@
-{
-  "contract_version": "agent-platform-runtime/v1",
-  "image_version": "0.1.0",
-  "entrypoint": ["/app/bin/runtime"],
-  "state_format": "hermes-runtime/1",
-  "capabilities": ["execution", "events", "cancel", "pause_resume", "steering", "files", "skills", "openapi_tools", "mcp_tools", "artifacts"]
-}
+{"contract_version":"agent-platform-runtime/v1","image_version":"0.2.0","entrypoint":["/app/bin/runtime"],"state_format":"hermes-runtime/2","capabilities":["execution","events","cancel","pause_resume","steering","files","skills","openapi_tools","mcp_tools","artifacts"]}

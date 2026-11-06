@@ -30,22 +30,12 @@ docker-sandbox-k8s:
 docker-sandbox:
 	docker build -f sandbox-runtime-go/Dockerfile -t agent-platform/sandbox-runtime:local .
 
-docker-sandbox-python:
-	docker build -f sandbox-runtime/Dockerfile.k8s -t agent-platform/sandbox-runtime:python ./sandbox-runtime
-
-docker-sandbox-node:
-	docker build -f sandbox-runtime-node/Dockerfile -t agent-platform/sandbox-runtime:node ./sandbox-runtime-node
-
 docker-sandbox-hermes:
 	docker build -f sandbox-runtime-hermes/Dockerfile -t agent-platform/sandbox-runtime:hermes ./sandbox-runtime-hermes
 
-# The console is intentionally built outside Docker so platform-image builds
-# do not install Node dependencies. Its dist files are embedded by Go.
 admin-build:
 	cd web/admin && npm install && npm run build
 
-# Builds and verifies locally; pushing remains an explicit docker push command.
-# CONTROL_REPOSITORY defaults to an example registry; set it to your image repo.
 control-image-arm64:
 	@tag="$(CONTROL_TAG)"; \
 	if [ -z "$$tag" ]; then tag="tke-arm64-$$(date +%Y%m%d%H%M%S)"; fi; \
